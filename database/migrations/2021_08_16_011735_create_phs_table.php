@@ -15,7 +15,7 @@ class CreatePhsTable extends Migration
     {
         Schema::create('phs', function (Blueprint $table) {
             $table->id();
-            $table->integer('ph');
+            $table->string('ph');
             $table->integer('musim_id');
             $table->timestamps();
         });

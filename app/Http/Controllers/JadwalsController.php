@@ -44,6 +44,7 @@ class JadwalsController extends Controller
     public function store(Request $request)
     {
         $jadwal = new Jadwal();
+        $jadwal->petani = $request->id_petani;
         $jadwal->jenis_tanaman = $request->jenis_tanaman;
         $jadwal->pembibitan = $request->pembibitan;
         $jadwal->penyemaian = $request->penyemaian;
@@ -85,6 +86,7 @@ class JadwalsController extends Controller
     public function update($id, Request $request)
     {
         $jadwal = Jadwal::find($id);
+        $jadwal->petani = $request->id_petani;
         $jadwal->jenis_tanaman = $request->jenis_tanaman;
         $jadwal->pembibitan = $request->pembibitan;
         $jadwal->penyemaian = $request->penyemaian;

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Musim extends Model
 {
-    public function ph()
+    public function phs()
     {
         return $this->hasMany('App\Models\Ph'); // This musim has many ph
     }

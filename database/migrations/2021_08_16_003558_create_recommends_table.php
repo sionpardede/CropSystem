@@ -16,7 +16,7 @@ class CreateRecommendsTable extends Migration
         Schema::create('recommends', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('ph');
+            $table->integer('ph_id');
             $table->string('musim');
             $table->string('isi');
             $table->timestamps();

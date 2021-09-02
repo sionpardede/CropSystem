@@ -22,8 +22,12 @@
                                 <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                     ID
                                 </th>
+                                {{ $jadwal->id }}
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 bg-white divide-y divide-gray-200">
+                                    @if ($jadwal->petani == Session::get('id'))
                                     {{ $jadwal->id }}
+                                    @endif
+
                                 </td>
                             </tr>
                             <tr class="border-b">

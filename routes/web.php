@@ -38,6 +38,9 @@ Route::get('/', function () {
 // Route::get('/getData/{id}', 'RecommendsController@getData')->name('getData');
 
 Route::resource('recommends', RecommendsController::class);
+Route::get('/index', 'RecommendsController@index')->name('index');
+Route::get('/getPhs/{id}', 'App\Http\Controllers\RecommendsController@getPhs')->name('getPhs');
+Route::get('/getData/{id}', 'App\Http\Controllers\RecommendsController@getData')->name('getData');
 
 Route::resource('comments', CommentsController::class);
 

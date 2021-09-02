@@ -40,12 +40,11 @@
                 </tbody>
             </table>
         </div>
-        @if(Auth::check() && Auth::user()->admin == 1)
+
         <div class="block mb-8">
-            <a href="{{ route('jadwals.create') }}" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Tambah Jadwal
-                Penanaman</a>
+            <a href="{{ route('jadwals.create') }}" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Tambah Jadwal Penanaman</a>
         </div>
-        @endif
+
         <div class="flex flex-col">
             <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                 <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
@@ -77,7 +76,13 @@
                                 <?php
                                 $number = 0;
                                 ?>
+
+
                                 @foreach($jadwals as $jadwal)
+
+                                @if ($jadwal->petani == Session::get('id'))
+
+
                                 <tr>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <?php
@@ -101,7 +106,7 @@
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                                         {{$jadwal->panen}}
                                     </td>
-                                    @if(Auth::check() && Auth::user()->admin == 1)
+
                                     <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                         <a href="{{ route('jadwals.show', $jadwal->id) }}" class="text-blue-600 hover:text-blue-900 mb-2 mr-2">View</a>
                                         <a href="{{ route('jadwals.edit', $jadwal->id) }}" class="text-indigo-600 hover:text-indigo-900 mb-2 mr-2">Edit</a>
@@ -111,9 +116,11 @@
                                             <input type="submit" class="text-red-600 hover:text-red-900 mb-2 mr-2" value="Delete">
                                         </form>
                                     </td>
-                                    @endif
+
                                 </tr>
+                                @endif
                                 @endforeach
+
                             </tbody>
                         </table>
                     </div>

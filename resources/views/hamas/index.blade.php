@@ -21,31 +21,33 @@
             <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                 <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
                     <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
-                        <div class="row">
+                        <div class="container">
+                            <div class="row">
+                                @foreach($hamas as $hama)
+                                <div class="col-3">
 
-                            @foreach($hamas as $hama)
-                            <div class="col-sm-3">
-                                <div class="card my-3 mx-3">
-                                    <img class="card-img-top" src="/image/{{ $hama->image }}" alt="Card image cap">
-                                    <div class="card-body">
-                                        <h5 class="card-title text-black text-center">{{$hama->name}}</h5>
+                                    <div class="card my-3">
+                                        <img class="card-img-top" style="height: 150px;" src="/image/{{ $hama->image }}" alt="Card image cap">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title text-black text-center">{{$hama->name}}</h5>
+
+                                            <a href="{{ route('hamas.show', $hama->id) }}" class="btn btn-primary btn-sm" type="button">Detail</a>
+
+                                            @if(Auth::check() && Auth::user()->admin == 1)
+                                            <a href="{{ route('hamas.edit', $hama->id) }}" class="btn btn-secondary btn-sm">Edit</a>
+                                            <form class="inline-block" action="{{ route('hamas.destroy', $hama->id) }}" method="POST" onsubmit="return confirm('Apakah anda yakin ingin menghapus data ini?');">
+                                                <input type="hidden" name="_method" value="DELETE">
+                                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                                <input type="submit" class="btn btn-danger btn-sm" value="Delete">
+                                            </form>
+                                            @endif
+
+                                        </div>
                                     </div>
-                                    <div class="card-footer">
-                                        <a href="{{ route('hamas.show', $hama->id) }}" class="card-link" type="button">Detail</a>
 
-                                        @if(Auth::check() && Auth::user()->admin == 1)
-                                        <a href="{{ route('hamas.edit', $hama->id) }}" class="card-link mr-4">Edit</a>
-
-                                        <form class="inline-block" action="{{ route('hamas.destroy', $hama->id) }}" method="POST" onsubmit="return confirm('Apakah anda yakin ingin menghapus data ini?');">
-                                            <input type="hidden" name="_method" value="DELETE">
-                                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                            <input type="submit" class="card-link" value="Delete">
-                                        </form>
-                                    </div>
-                                    @endif
                                 </div>
+                                @endforeach
                             </div>
-                            @endforeach
                         </div>
                     </div>
                 </div>

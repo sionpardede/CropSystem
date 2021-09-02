@@ -58,7 +58,7 @@
                     <hr class="divider my-4" />
                 </div>
                 <div class="col-lg-8 align-self-baseline">
-                    <p class="text-white-75 font-weight-light mb-5">Sekarang semua dapat bercocok tanam! Anda bisa mendapatkan dalam bercocok tanam disini.</p>
+                    <p class="text-white-75 font-weight-light mb-5">Kemudahan bagi petani dalam meningkatkan produksi tanaman dengan konsep PHT (Pengendalian Hama Terpadu)</p>
                     <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Temukan Lebih banyak</a>
                 </div>
             </div>
@@ -69,9 +69,9 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
-                    <h2 class="text-white mt-0">Informasi Cropping!</h2>
+                    <h2 class="text-white mt-0">Sistem Rotasi Tanaman</h2>
                     <hr class="divider light my-4" />
-                    <p class="text-white-50 mb-4">Pertanian ditentukan oleh jenis tanah dan parameter iklim yang menentukan pengaturan agro-ekologi keseluruhan untuk makanan dan kesesuaian atau serangkaian tanaman atau serangkaian tanaman untuk budidaya</p>
+                    <p class="text-white-50 mb-4">Rotasi tanaman adalah praktik penanaman berbagai jenis tanaman secara bergiliran di satu lahan. Elemen utama dari rotasi tanaman adalah pengembalian nutrisi nitrogen melalui tanaman legum setelah penanaman tumbuhan serealia dan sejenisnya. Rotasi tanaman mencegah terakumulasinya patogen dan hama yang sering menyerang satu spesies saja. Rotasi tanaman juga meningkatkan kualitas struktur tanah dan mempertahankan kesuburan dengan melakukan pergantian antara tanaman berakar dalam dengan tanaman berakar dangkal. Rotasi tanaman merupakan bagian dari polikultur.</p>
                     <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
                 </div>
             </div>
@@ -79,40 +79,20 @@
     </section>
     <!-- Services-->
     <section class="page-section" id="services">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
 
-        <h2 class="text-center mt-0">Informasi Rekomendasi Sistem Rotasi Tanaman</h2>
-        <hr class="divider my-4" />
+                    <h2 class="text-center mt-0">Informasi Sistem Rotasi Tanaman</h2>
+                    <hr class="divider my-4" />
+                    <p class="text-black-50 mb-4">Rotasi tanaman adalah praktik penanaman berbagai jenis tanaman secara bergiliran di satu lahan. Rotasi tanaman diketahui memberikan manfaat bagi tanah. Elemen utama dari rotasi tanaman adalah pengembalian nutrisi nitrogen melalui tanaman legum setelah penanaman tumbuhan serealia dan sejenisnya. Rotasi tanaman mencegah terakumulasinya patogen dan hama yang sering menyerang satu spesies saja. Rotasi tanaman juga meningkatkan kualitas struktur tanah dan mempertahankan kesuburan dengan melakukan pergantian antara tanaman berakar dalam dengan tanaman berakar dangkal. Rotasi tanaman merupakan bagian dari polikultur.</p>
+                </div>
 
-
-        <div class="form-group ml-5 mr-5 mt-5">
-            <label for="musim">Musim</label>
-            <select class="form-control col-10" id="musim" name="musim">
-                <option value="Kemarau">Kemarau</option>
-                <option value="Hujan">Hujan</option>
-            </select>
-        </div>
-        <div class="form-group ml-5 mr-5 mt-1">
-            <label for="ph">PH Tanah</label>
-            <select class="form-control col-10" id="ph" name="ph">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-                <option value="13">13</option>
-                <option value="14">14</option>
-
-            </select>
+            </div>
         </div>
 
-        <button type="submit" id="submit" name="submit" class="btn btn-primary ml-5">Rekomendasikan</button>
+
+
 
 
     </section>

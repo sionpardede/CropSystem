@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 
 class UsersController extends Controller
 {
@@ -23,9 +24,11 @@ class UsersController extends Controller
             if (Hash::check($password, $data->password)) {
                 if ($data->admin == '1') {
                     Auth::login($data);
+                    Session::put('id', $data->id);
                     return redirect()->intended('dashboard');
                 } elseif ($data->farmer == '1') {
                     Auth::login($data);
+                    Session::put('id', $data->id);
                     return redirect()->intended('dashboard');
                 } else {
                     return redirect('login')->with('alert', 'Password atau Email, Salah !');

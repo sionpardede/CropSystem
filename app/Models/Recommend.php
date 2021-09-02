@@ -10,12 +10,8 @@ class Recommend extends Model
 
     use HasFactory;
 
-    public $table = "recommends";
-
-    protected $fillable = [
-        'name',
-        'ph',
-        'musim',
-        'isi',
-    ];
+    public function ph()
+    {
+        return $this->belongsTo('App\Models\Ph');
+    }
 }

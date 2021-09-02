@@ -16,12 +16,16 @@
                 @csrf
                 <div class="shadow overflow-hidden sm:rounded-md">
                     <div class="px-4 py-3 bg-white sm:p-6">
+                        <input type="hidden" name="id_petani" id="id_petani" value="{{ Session::get('id') }}">
                         <label for="varietasTanaman" class="block font-medium text-sm text-gray-700">Varietas Tanaman</label>
                         <input type="text" name="jenis_tanaman" id="jenis_tanaman" class="form-input rounded-md shadow-sm mt-1 block" value="{{ old('jenis_tanaman', '') }}" />
                         @error('jenis_tanaman')
                         <p class="text-sm text-red-600">{{ $message }}</p>
                         @enderror
                     </div>
+
+
+
                     <div class="px-4 py-1 bg-white sm:p-6">
                         <label for="pembibitan" class="block font-medium text-sm text-gray-700">Waktu Pembibitan</label>
                         <input type="date" name="pembibitan" id="pembibitan" class="form-input rounded-md shadow-sm mt-1 block" value="{{ old('pembibitan', '') }}" />

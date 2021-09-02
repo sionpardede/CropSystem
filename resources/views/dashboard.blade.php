@@ -98,7 +98,7 @@
                                 <td>
                                     @foreach($farmer as $farmers)
                                     @if($farmers->farmer == 1)
-                                        {{$farmers->name}}
+                                    {{$farmers->name}}
                                     @endif
 
                                     @endforeach
